@@ -1,0 +1,21 @@
+
+block formulario
+  h1 Creación cliente
+  form(class='formulario' action="/client/cliente" method="POST") 
+
+    input(class='form-item' id="nombre" name="nombre" placeholder="Nombre" type="text" value= cliente ? cliente.nombre : '')
+
+    input(class='form-item' id="apellido" name="apellido" placeholder="Apellido" type="text" value= cliente ? cliente.apellido : '')
+
+    input(class='form-item' id="documento" name="documento" placeholder="Documento" type="number" value= cliente ? cliente.documento : '')
+
+    input(class='form-item' id="correo" name="correo" placeholder="Correo" type="email" value= cliente ? cliente.correo : '')
+
+    input(class='form-item' id="direccion" name="direccion" placeholder="Dirección" type="text" value= cliente ? cliente.direccion : '')
+
+    input(class='btnGuardar' id="btnGuardar" value="Crear Cliente" type="submit")
+
+  if errores 
+    section(class='errores')
+      each error in errores
+        p=error.msg
