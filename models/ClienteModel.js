@@ -4,26 +4,26 @@ import { dataBase } from "../config/dataBase.js";
 const Cliente = dataBase.define('cliente', {
   nombre:{
     type: DataTypes.STRING,
-    allowNull: false
+    //allowNull: false
   },
   apellido:{
     type: DataTypes.STRING,
-    allowNull: false
+    //allowNull: false
   },
   documento:{
     type: DataTypes.STRING,
-    allowNull: false
+    //allowNull: false
   },
   correo: {
     type: DataTypes.STRING,
-    allowNull: false
+    //allowNull: false
   },
   direccion: {
     type: DataTypes.STRING,
-    allowNull: false
+    //allowNull: false
   },
   telefono: DataTypes.STRING,
-  allowNull: false
+  //allowNull: false
 })
 
 export{

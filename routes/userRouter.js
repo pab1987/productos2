@@ -11,8 +11,6 @@ userRouter.get('/confirmarUsuario/:token', activarUsuario)
 //userRouter.post('/cliente', formularioCliente)
 
 
-console.log("En el userRouter ***************");
-
 
 export {
   userRouter
