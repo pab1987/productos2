@@ -51,6 +51,12 @@ const formularioRegistro = (req, res) => {
   });
 };
 
+const formularioCliente = (req, res) => {
+  res.render("client/cliente", {
+    nombreVista: "Nuevo Cliente",
+  });
+};
+
 const crearUsuario = async (req, res) => {
   await check("nombre")
     .notEmpty()
@@ -146,5 +152,6 @@ export {
   formularioRegistro,
   formularioRecuperar,
   crearUsuario,
-  activarUsuario
+  activarUsuario,
+  formularioCliente
 };

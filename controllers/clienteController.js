@@ -1,6 +1,6 @@
 import { Cliente } from "../models/ClienteModel.js";
 
-//const {nombre, apellido, documento, correo, direccion, telefono, token} = cliente
+const {nombre, apellido, documento, correo, direccion, telefono, token} = cliente
 
 const generarId = () =>
   Math.random().toString(32).substring(2) + Date.now().toString(32);

@@ -1,5 +1,5 @@
 import express from 'express'
-import { formularioLogin, formularioRegistro, formularioRecuperar , crearUsuario, activarUsuario} from '../controllers/userController.js'
+import { formularioLogin, formularioCliente, formularioRegistro, formularioRecuperar , crearUsuario, activarUsuario} from '../controllers/userController.js'
 
 const userRouter = express.Router()
 
@@ -8,6 +8,11 @@ userRouter.get('/registro', formularioRegistro)
 userRouter.post('/registro', crearUsuario)
 userRouter.get('/recuperar', formularioRecuperar)
 userRouter.get('/confirmarUsuario/:token', activarUsuario)
+//userRouter.post('/cliente', formularioCliente)
+
+
+console.log("En el userRouter ***************");
+
 
 export {
   userRouter
