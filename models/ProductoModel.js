@@ -2,29 +2,30 @@ import { DataTypes } from "sequelize";
 import { dataBase } from "../config/dataBase.js";
 
 const Producto = dataBase.define('producto', {
-  nombreProducto:{
+  nombre:{
     type: DataTypes.STRING,
-    allowNull: false
+    //allowNull: false
   },
-  precioProducto:{
+  precio:{
     type: DataTypes.STRING,
-    allowNull: false
+    //allowNull: false
   },
-  referenciaProducto:{
+  referencia:{
     type: DataTypes.STRING,
-    allowNull: false
+    //allowNull: false
   },
-  cantidadProducto:{
+  cantidad:{
     type: DataTypes.STRING,
-    allowNull: false
+    //allowNull: false
   },
-  descripcionProducto:{
+  descripcion:{
     type: DataTypes.STRING,
-    allowNull: false
+    //allowNull: false
   }
   
 })
-
+ console.log(JSON.stringify(Producto));
+ 
 export{
   Producto
 }

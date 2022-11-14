@@ -22,8 +22,10 @@ const Cliente = dataBase.define('cliente', {
     type: DataTypes.STRING,
     //allowNull: false
   },
-  telefono: DataTypes.STRING,
+  telefono: {
+    type: DataTypes.STRING,
   //allowNull: false
+  }
 })
 
 export{

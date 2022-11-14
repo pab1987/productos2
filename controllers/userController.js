@@ -41,6 +41,8 @@ const generarId = () =>
   Math.random().toString(32).substring(2) + Date.now().toString(32);
 
 const formularioLogin = (req, res) => {
+  //const {correo, contrasena } =  req.body;
+  //console.log(correo);
   res.render("auth/login", {
     nombreVista: "Iniciar Sesion",
   });
@@ -118,6 +120,22 @@ const crearUsuario = async (req, res) => {
   });
 };
 
+/* const iniciarSesion = async (req, res) => {
+  console.log("Si entra a iniciar sesión")
+  const email = await check("correo")
+  const contra = await check("contrasena")
+  const user = await Usuario({where: {correo}})
+  const password = await Usuario.findOne({where: {contrasena}})
+
+  if (email == user && contra == password) {
+    res.render("client/cliente", {
+      nombreVista: "Nuevo Cliente",
+    });
+  }
+
+
+} */
+
 const formularioRecuperar = (req, res) => {
   res.render("auth/recuperar", {
     nombreVista: "Recuperar Usuario",
@@ -153,5 +171,6 @@ export {
   formularioRecuperar,
   crearUsuario,
   activarUsuario,
-  formularioCliente
+  formularioCliente,
+  //iniciarSesion
 };

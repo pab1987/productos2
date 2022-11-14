@@ -8,6 +8,7 @@ userRouter.get('/registro', formularioRegistro)
 userRouter.post('/registro', crearUsuario)
 userRouter.get('/recuperar', formularioRecuperar)
 userRouter.get('/confirmarUsuario/:token', activarUsuario)
+//userRouter.get('/iniciarSesion', iniciarSesion)
 //userRouter.post('/cliente', formularioCliente)
 
 

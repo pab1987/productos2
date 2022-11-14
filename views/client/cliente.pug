@@ -13,6 +13,8 @@ block formulario
 
     input(class='form-item' id="direccion" name="direccion" placeholder="Dirección" type="text" value= cliente ? cliente.direccion : '')
 
+    input(class='form-item' id="telefono" name="telefono" placeholder="Teléfono" type="text" value= cliente ? cliente.telefono : '')
+
     input(class='btnGuardar' id="btnGuardar" value="Crear Cliente" type="submit")
 
   if errores 

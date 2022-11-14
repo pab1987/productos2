@@ -8,7 +8,19 @@ html(lang="es")
     style 
       include ../css/style.css
   body 
-    main  
-      block formulario
+    section(class="panel")
+      img(src="https://i.ibb.co/LP4YSG5/Logo.png")
+
+      section(class="boton")
+        a#boton.btn(href="../client/cliente") Clientes
+        a#boton.btn(href="../product/producto") Productos
+
+      section
+        h3 DERECHOS RESERVADOS &copy
+        h3 JUAN, PABLO, MAFE
+        
+    main 
+      section 
+        block formulario
 
   

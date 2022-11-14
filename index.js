@@ -2,6 +2,7 @@
 import express from 'express'
 import { userRouter } from './routes/userRouter.js'
 import { clienteRouter } from './routes/clienteRouter.js'
+import { productoRouter } from './routes/productoRouter.js'
 import { dataBase } from './config/dataBase.js'
 
 // Realizando la instancia para trabajar con express
@@ -20,6 +21,7 @@ try {
 
 app.use('/auth', userRouter)
 app.use('/client', clienteRouter)
+app.use('/product', productoRouter)
 app.set('view engine', 'pug')
 app.set('views', './views')
 

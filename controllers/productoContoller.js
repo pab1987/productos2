@@ -1,6 +1,6 @@
 import { Producto } from "../models/ProductoModel.js";
 
-//const {nombre, apellido, documento, correo, direccion, telefono, token} = cliente
+//const {nombre, precio, referencia, cantidad, descripcion, token} = Producto
 
 const generarId = () =>
   Math.random().toString(32).substring(2) + Date.now().toString(32);
@@ -48,7 +48,7 @@ const crearProducto = async (req, res) => {
       },
     });
   }
-  const {nombre, precio, referencia, cantidad, descripcion} = req.body;
+  const {nombre, precio, referencia, cantidad, descripcion, token} = req.body;
 
   const validarProducto = await Usuario.findOne({ where: { nombre } });
 
@@ -71,7 +71,8 @@ const crearProducto = async (req, res) => {
     precio,
     referencia,
     cantidad,
-    descripcion
+    descripcion,
+    token: generarId()
   });
 
 };
